@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 18px #888888;
+
+}
+
+.sum-line {
+    border-top: 1px dotted black;
+}
+
+
+.feed-back {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* .dislike img {
+    filter: invert(70%);
+} */
