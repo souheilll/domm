@@ -6,6 +6,8 @@ const sum = document.querySelector('#total-sum');
 const prix = document.querySelectorAll('.price');
 const like = document.querySelectorAll('#li');
 const dislike = document.querySelectorAll('#di');
+const del = document.querySelectorAll('#del');
+const cardd = document.querySelectorAll('.card');
 
 
 //***************************the plus event********************
@@ -51,6 +53,18 @@ for (let i = 0; i <= dislike.length - 1; i++) {
     })
 }
 
+
+/************************   remove the card elemnt *************************/
+
+for (let i = 0; i <= del.length - 1; i++) {
+    del[i].addEventListener('click', function () {
+        cardd[i].remove();
+        sum.textContent = parseInt(sum.textContent) -
+            parseInt(prix[i].textContent) * parseInt(qte[i].textContent)
+
+    })
+}
+
 //*********************init function **************************** */
 function init() {
     document.querySelector('#total-sum').textContent = '0';
@@ -59,12 +73,5 @@ function init() {
         like[i].style.filter = 'invert(80%)'
         dislike[i].style.filter = 'invert(80%)'
     }
- /*    for (let i = 0; i <= like.length - 1; i++) {
-        
-    }
-    for (let i = 0; i <= dislike.length - 1; i++) {
-       
-    } */
-
 }
 init();
